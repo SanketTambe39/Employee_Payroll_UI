@@ -50,7 +50,6 @@ function save(){
     employee.startDate = new Date(parseInt(document.getElementById("year").value), parseInt(document.getElementById("month").value) - 1, parseInt(document.getElementById("day").value));
     createAndUpdateStorage(employee);
 }
-
 function createAndUpdateStorage(employee) {
     let employeeList = JSON.parse(localStorage.getItem("EmployeeList"));
     if (employeeList != undefined) {
@@ -61,8 +60,6 @@ function createAndUpdateStorage(employee) {
     alert(employeeList.toString());
     localStorage.setItem("EmployeeList", JSON.stringify(employeeList));
 }
-
 function resetForm() {
     document.getElementById("emp-form").reset();
 }
-
