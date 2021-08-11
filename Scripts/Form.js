@@ -48,7 +48,18 @@ function save(){
     employee.department = document.querySelector('input[name = department]:checked').value;
     employee.salary = document.getElementById("salary").value;
     employee.startDate = new Date(parseInt(document.getElementById("year").value), parseInt(document.getElementById("month").value) - 1, parseInt(document.getElementById("day").value));
-    alert(employee.toString());
+    createAndUpdateStorage(employee);
+}
+
+function createAndUpdateStorage(employee) {
+    let employeeList = JSON.parse(localStorage.getItem("EmployeeList"));
+    if (employeeList != undefined) {
+        employeeList.push(employee);
+    } else {
+        employeeList = [employee];
+    }
+    alert(employeeList.toString());
+    localStorage.setItem("EmployeeList", JSON.stringify(employeeList));
 }
 
 function resetForm() {
