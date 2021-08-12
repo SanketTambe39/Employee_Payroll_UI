@@ -165,7 +165,7 @@ select {
     background-color: #e2e2e2;
 }
 
-.text-error {
+.text-error, .date-error {
     font-size: 12px;
     font-style: italic;
     color: red;
