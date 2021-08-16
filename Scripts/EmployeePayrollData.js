@@ -1,15 +1,22 @@
 class EmployeePayrollData {
 
+    get id() {
+        return this._id;
+    }
+
+    set id(id) {
+        this._id = id;
+    }
+
     get name() {
         return this._name;
     }
 
     set name(name) {
-        let nameRegex = /^[A-Z][a-z]{2,}$/;
+        let nameRegex = /^[A-Z][a-zA-Z]{2,}([ ][A-Z]([a-z]{1,})*)*$/;
         if (nameRegex.test(name)) {
             this._name = name;
-        } 
-        else {
+        } else {
             throw "Invalid name";
         }
     }
@@ -25,6 +32,7 @@ class EmployeePayrollData {
     get salary() {
         return this._salary;
     }
+
     set salary(salary) {
         this._salary = salary;
     }
@@ -64,7 +72,8 @@ class EmployeePayrollData {
     set note(note) {
         this._note = note;
     }
+
     toString() {
-        return "\nName: " + this.name + "\nPicture: " + this.picture + "\nGender: " + this.gender + "\nDepartment: " + this.department + "\nSalary: " + this.salary + "\nStart date: " + this.startDate + "\nNote: " + this.note;
+        return "ID: " + this.id + "\nName: " + this.name + "\nPicture: " + this.picture + "\nGender: " + this.gender + "\nDepartment: " + this.department + "\nSalary: " + this.salary + "\nStart date: " + this.startDate + "\nNote: " + this.note;
     }
 }

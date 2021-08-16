@@ -4,18 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;1,500&display=swap"rel="stylesheet">
-    <link href ="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../Style/Form.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;1,500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/form-style.css">
+    <script src="../Scripts/EmployeePayrollData.js"> </script>
+    <script src="../Scripts/form.js"> </script>
     <title>Employee Payroll Form</title>
 </head>
 
 <body>
     <header class="header-content header">
         <div class="logo-content">
-            <img src="../Assets/logo.png" alt="Logo">
+            <img src="../assets/logo.png" alt="Logo">
             <div>
                 <span class="emp-text"><strong>EMPLOYEE</strong></span>
+                <br>
                 <span class="emp-text emp-payroll"><strong>PAYROLL</strong></span>
             </div>
         </div>
@@ -32,19 +37,23 @@
                 <label class="label text" for="profile">Profile picture</label>
                 <div class="profile-radio-content">
                     <label>
-                        <input type="radio" id="profile1" name="profile" value="../assets/profile-images/Ellipse -3.png" required>
+                        <input type="radio" id="profile1" name="profile" value="../assets/profile-images/Ellipse -3.png"
+                            required>
                         <img class="profile" id="image1" src="../assets/profile-images/Ellipse -3.png">
                     </label>
                     <label>
-                        <input type="radio" id="profile2" name="profile" value="../assets/profile-images/Ellipse 1.png" required>
+                        <input type="radio" id="profile2" name="profile" value="../assets/profile-images/Ellipse 1.png"
+                            required>
                         <img class="profile" id="image2" src="../assets/profile-images/Ellipse 1.png">
                     </label>
                     <label>
-                        <input type="radio" id="profile3" name="profile" value="../assets/profile-images/Ellipse -8.png" required>
+                        <input type="radio" id="profile3" name="profile" value="../assets/profile-images/Ellipse -8.png"
+                            required>
                         <img class="profile" id="image3" src="../assets/profile-images/Ellipse -8.png">
                     </label>
                     <label>
-                        <input type="radio" id="profile4" name="profile" value="../assets/profile-images/Ellipse -7.png" required>
+                        <input type="radio" id="profile4" name="profile" value="../assets/profile-images/Ellipse -7.png"
+                            required>
                         <img class="profile" id="image4" src="../assets/profile-images/Ellipse -7.png">
                     </label>
                 </div>
@@ -53,10 +62,10 @@
                 <label class="label text" for="gender">Gender</label>
                 <div>
                     <label class="text" for="male">
-                        <input type="radio" id="male" name="gender" value="male" required>Male
+                        <input type="radio" id="male" name="gender" value="Male" required>Male
                     </label>
                     <label class="text" for="female">
-                        <input type="radio" id="female" name="gender" value="female" required>Female
+                        <input type="radio" id="female" name="gender" value="Female" required>Female
                     </label>
                 </div>
             </div>
@@ -73,7 +82,8 @@
                         <input class="checkbox" type="checkbox" id="finance" name="department" value="Finance">Finance
                     </label>
                     <label class="text" for="engineer">
-                        <input class="checkbox" type="checkbox" id="engineer" name="department" value="Engineer">Engineer
+                        <input class="checkbox" type="checkbox" id="engineer" name="department"
+                            value="Engineer">Engineer
                     </label>
                     <label class="text" for="others">
                         <input class="checkbox" type="checkbox" id="others" name="department" value="Others">Others
@@ -81,13 +91,14 @@
                 </div>
             </div>
             <div class="row-content">
-                <label class="label text" for="salary">Your salary:</label>
-                <input class="input" type="range" name="salary" id="salary" min="3000" max="5000" step="100" value="4000">
+                <label class="label text" for="salary">Choose Your Salary:</label>
+                <input class="input" type="range" name="salary" id="salary" min="3000" max="5000" step="100"
+                    value="4000">
                 <output class="salary-output text" for="salary">4000</output>
             </div>
             <div class="row-content">
                 <label class="label text" for="startDate">Start date</label>
-                <div>
+                <div id="startDate">
                     <select id="day" name="Day">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -149,7 +160,7 @@
                 <label class="label text" for="notes">Notes</label>
                 <textarea id="notes" class="input" name="Notes" placeholder="" style="height: 100px;"> </textarea>
             </div>
-            <div class="buttonParent"> 
+            <div class="buttonParent">
                 <a href="./home.html" class="resetButton button cancelButton">Cancel</a>
                 <div class="submit-reset">
                     <button type="submit" class="button submitButton" id="submitButton">Submit</button>
@@ -159,6 +170,5 @@
         </form>
     </div>
 </body>
-<script src="../Scripts/Form.js"></script>
-<script src="../Scripts/Employee_Payroll.js"></script>
+
 </html>
